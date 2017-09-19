@@ -1,0 +1,67 @@
+<html>
+  <head>
+
+
+<title>Firebase Testing</title>
+
+  </head>
+<body>
+
+<input type="text" id="search" placeholder="Search Query Here !"> </input>
+<br><button onclick="submit()" id="btn" >Submit Query</button>
+
+
+
+
+
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+
+
+<script>
+var text=document.getElementById('search');
+var submitt=document.getElementById('btn');
+var counter=0;
+function submit()
+{
+console.log("working");
+
+var firebaseRef=firebase.database().ref();
+firebaseRef.child(counter).set('ShahKhan');
+counter++;
+
+}
+
+</script>
+
+
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyASW9_LsVfyRkFZpj_vJpjuwPictFpeHvM",
+    authDomain: "testing-856a9.firebaseapp.com",
+    databaseURL: "https://testing-856a9.firebaseio.com",
+    projectId: "testing-856a9",
+    storageBucket: "testing-856a9.appspot.com",
+    messagingSenderId: "588104114129"
+  };
+  firebase.initializeApp(config);
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+</html>
